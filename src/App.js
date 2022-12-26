@@ -73,12 +73,12 @@ const App = () => {
                     <h5 className="card-title text-center">{p.PFName} {p.SkillDesc}</h5>
                     <h5 className="card-title text-center">{'Value: $' + p.Value}</h5>
                     {p.UpComingMatchesList.map((u,i) => {
-                      for (const [] of Object.entries(u)) {
+                      
                         return (<div key={i}>
                           <p className="card-text text-center">{(u.CCode && u.VsCCode) ? `${u.CCode} v/s ${u.VsCCode}`:'No Match'}</p>
                           <p className="card-text text-primary text-center">{(u.CCode && u.VsCCode) ?`on ${u.MDate}`:''}</p>
                         </div>)
-                      }
+                      
                     })}
                   </div>
                 </div>
