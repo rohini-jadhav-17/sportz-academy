@@ -11,13 +11,13 @@ const App = () => {
   
   // to fetch api data
   useEffect(() => {
-    axios.get('https://api.npoint.io/20c1afef1661881ddc9c').
-      then(res => {
+    axios.get('https://api.npoint.io/20c1afef1661881ddc9c')
+      .then(res => {
         setPlayer(res.data.playerList)
         console.log(player)
-      }).
-    catch(e => console.log(e));
-  }, [])
+      })
+    .catch(e => console.log(e));
+  })
   
   // to sort player according to $Value - by default on the browser
   const sortAssOrder = (a,b) => {
@@ -38,7 +38,7 @@ const App = () => {
     }
     const searchResult = player.filter(p => p.PFName.toLowerCase().startsWith(e.target.value.toLowerCase()) || p.TName.toLowerCase().startsWith(e.target.value.toLowerCase()));
     setPlayer(searchResult);
-    console.log(player)
+    // console.log(player)
   }
   return (
     <>      
